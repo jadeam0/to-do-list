@@ -1,8 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
-let taskList = [];
-
 function addTask(){
     if(inputBox.value === ''){
         alert("You must write soomething");
@@ -19,7 +17,11 @@ function addTask(){
     savData();
 }
 
-listContainer.addEventListener('click', function(e){
+// function sort(){
+//     listContainer.innerHTML = addTask.sort();
+// }
+
+listContainer.addEventListener('click', (e) => {
     if(e.target.tagName === "LI"){
         e.target.classList.toggle('checked');
         savData();
